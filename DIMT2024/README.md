@@ -14,8 +14,10 @@ In order to successfully complete this demo you need to install few tools before
 
 - If you don't have a Confluent Cloud account, sign up for a free trial [here](https://www.confluent.io/confluent-cloud/tryfree).
 - Install Confluent Cloud CLI by following the instructions [here](https://docs.confluent.io/confluent-cli/current/install.html).
-- Sign up for a free MongoDB Atlas account [here](https://www.mongodb.com/cloud/atlas/register?utm_campaign=devrel&utm_source=workshop&utm_medium=cta&utm_content=Confluent%20x%20AWS%20x%20MongoDB%20Workshop%20%40%20Data%20in%20Motion%20Tour%20FY25&utm_term=jade.furubayashi).
+
 - Download and Install Terraform [here](https://developer.hashicorp.com/terraform/downloads?ajs_aid=837a4ee4-253b-4b3d-bf11-952575792ad1&product_intent=terraform)
+
+- (Optional) Sign up for a free MongoDB Atlas account [here](https://www.mongodb.com/cloud/atlas/register?utm_campaign=devrel&utm_source=workshop&utm_medium=cta&utm_content=Confluent%20x%20AWS%20x%20MongoDB%20Workshop%20%40%20Data%20in%20Motion%20Tour%20FY25&utm_term=jade.furubayashi).
 
   > **Note:** This demo was built and validate on a Mac (x86).
 
@@ -23,41 +25,42 @@ In order to successfully complete this demo you need to install few tools before
 
 ### 1. Confluent Cloud
 
-Create Confluent Cloud API keys by following [this](https://registry.terraform.io/providers/confluentinc/confluent/latest/docs/guides/sample-project#create-a-cloud-api-key) guide.
+Create Confluent Cloud API keys by following steps.
 
 > **Note:** This is different than Kafka cluster API keys.
-1.1. Login to Confluent Cloud
-    ![alt text](image.png)
+
+1.1. Login to Confluent Cloud.
+
+    Right Panel -> Click on Accounts & Access
+ ![alt text](images/image-1.png)
 
 1.2. Create [Service Account](https://confluent.cloud/settings/org/accounts/service-accounts/add)
-    Right Panel -> Click on Accounts & Access
-    ![alt text](image-1.png)
-
+    
     Choose Service Account -> Click on + Add Service Account
-![alt text](image-2.png)
+![alt text](images/image-2.png)
 
     Add Name and description as tf-runner -> click Next
-![alt text](image-3.png)
+![alt text](images/image-3.png)
 
     Add Access -> Select Organization -> Click Add Role Assignment -> Select OrganizationAdmin -> Click Next
   
-![alt text](image-5.png)
-![alt text](image-6.png) 
+![alt text](images/image-5.png)
+![alt text](images/image-6.png) 
 
     Click -> Create Service Account
 
 1.3. Create [API Keys](https://confluent.cloud/settings/api-keys/create) for the service account
     Right Side bar -> Click on API Keys
-    ![alt text](image-7.png)
+    ![alt text](images/image-7.png)
 
     Select Service Account -> Existing Account -> choose 'tf-runner' as a service account -> Click Next
-![alt text](image-9.png)
+![alt text](images/image-9.png)
 
     Select Resource Scope -> **Cloud Resource Management**
-![alt text](image-8.png)
+![alt text](images/image-8.png)
 
-    Creat API Key -> Add Name and Description - tf-runner -> Click Create API Key -> Download API Keys
-![alt text](image-10.png)
+    Creat API Key -> Add Name and Description - tf-runner -> Click Create API Key -> Download API Keys -> Click Complete
+![alt text](images/image-10.png)
 
 
 ### 2. MongoDB Atlas (Optional)
